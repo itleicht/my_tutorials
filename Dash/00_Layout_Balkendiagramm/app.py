@@ -2,10 +2,12 @@
 
 
 from dash import Dash, html, dcc
+from flask import Flask
 import plotly.express as px
 import pandas as pd
 
-app = Dash(__name__)
+server = Flask(__name__)
+app = Dash(__name__, server=server)
 
 # Pandas DataFrame erstellen:
 df = pd.DataFrame({
