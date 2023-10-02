@@ -3,9 +3,11 @@
 
 
 from dash import Dash, html, dcc
-import os
-print(os.getcwd())
-app = Dash(__name__)
+from flask import Flask
+
+
+server = Flask(__name__)
+app = Dash(__name__, server=server)
 
 markdown_text = '''
 ### Dash und Markdown Text anstatt HTML-Elemente zu verwenden
