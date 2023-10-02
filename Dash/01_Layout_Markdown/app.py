@@ -30,13 +30,13 @@ Siehe auch das [60 Sekunden Markdown Tutorial](http://commonmark.org/help/)
 *Schräger Text*  
 ** Fetter Text **  
 Zeilenumbruch mit 2 Leerzeichen am Satzende !  
-![Bildtext](./sunset.jpg)
+![Bildtext](https://cdn.pixabay.com/photo/2016/11/08/05/20/sunset-1807524_1280.jpg)
 '''
 
 app.layout = html.Div([
     dcc.Markdown(children=markdown_text),
-    html.Img(alt="Test", src="./sunset.jpg")
+    html.Img(alt="Test", src="https://cdn.pixabay.com/photo/2016/11/08/05/20/sunset-1807524_1280.jpg")
 ])
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
